@@ -17,21 +17,23 @@ a {
 .login-container {
   background-color: #000;
   color: #fff;
-  width: 340px;
+  width: 360px;
   height: 200px;
   margin: 220px auto;
   border-radius: 10px;
   font-size: 18px;
   padding: 20px;
   display: grid;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto 30%;
-  gap: 10px;
+  gap: 20px;
 }
 
 .login-form {
+  grid-column: 1 / -1;
   display: grid;
   grid-template-columns: 1fr 2.5fr;
-  gap: 15px;
+  gap: 20px;
   align-items: center;
 }
 
@@ -39,17 +41,11 @@ a {
   align-self: stretch;
 }
 
-.login-btn {
-  width: 150px;
-  height: 38px;
-  margin: 8px auto;
-}
-
 /* register */
 .register-container {
   background-color: #000;
   width: 340px;
-  height: 250px;
+  height: 240px;
   margin: 220px auto;
   border-radius: 10px;
   font-size: 18px;
@@ -57,24 +53,18 @@ a {
   padding: 20px;
   display: grid;
   grid-template-rows: auto 25%;
-  row-gap: 10px;
+  row-gap: 20px;
 }
 
 .register-form {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 10px;
+  gap: 15px;
   align-items: center;
 }
 
 .register-input {
   align-self: stretch;
-}
-
-.register-btn {
-  width: 150px;
-  height: 38px;
-  margin: 10px auto;
 }
 
 
@@ -171,4 +161,10 @@ a {
 /* other */
 .hidden {
   display: none;
+}
+
+.form-btn {
+  width: 150px;
+  height: 38px;
+  margin: 8px auto;
 }

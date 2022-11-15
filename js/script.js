@@ -10,6 +10,7 @@ const loginForm = document.querySelector('.login-form');
 const registerForm = document.querySelector('.register-form');
 
 const loginBtn = document.querySelector('.login-btn');
+const toRegisterBtn = document.querySelector('.to-register');
 const registerBtn = document.querySelector('.register-btn');
 const logOut = document.querySelector('.logout');
 const woodenfish = document.querySelector('.woodenfish-container');
@@ -48,6 +49,11 @@ registerBtn.addEventListener('click', function () {
   registerContainer.classList.add('hidden');
   loginContainer.classList.remove('hidden');
 });
+
+toRegisterBtn.addEventListener('click', function () {
+  registerContainer.classList.remove('hidden');
+  loginContainer.classList.add('hidden');
+})
 
 // 登录
 loginBtn.addEventListener('click', function () {
@@ -103,8 +109,16 @@ woodenfish.addEventListener('click', function () {
 
 const init = function () {
   const userJSON = localStorage.getItem('WFUser');
-  const { meritsNum } = JSON.parse(userJSON);
-  merits.textContent = `功德：${meritsNum ? meritsNum : 0}`;
+  if (!userJSON) {
+    registerContainer.classList.add('hidden');
+    header.classList.add('hidden');
+    container.classList.add('hidden');
+  } else {
+    registerContainer.classList.add('hidden');
+    loginContainer.classList.add('hidden');
+    const { meritsNum } = JSON.parse(userJSON);
+    merits.textContent = `功德：${meritsNum ? meritsNum : 0}`;
+  }
 }
 
 init();
