@@ -1,0 +1,41 @@
+/* 
+  在媒体查询中rem和em不依赖于HTML字体大小
+  1rem = 1em = 16px
+*/
+
+/* 媒体查询 */
+
+/* <= 1024px */
+@media (max-width: 74em) {
+  .merits-container {
+    margin-bottom: 12rem;
+  }
+}
+
+/* <= 620px */
+@media (max-width: 39em) {
+  .stick {
+    width: 17rem;
+    height: 17rem;
+  }
+
+  .woodenfish {
+    margin-top: 7rem;
+    width: 36rem;
+    height: 27rem;
+  }
+}
+
+/* <= 425px */
+@media (max-width: 27em) {
+  .stick {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  .woodenfish {
+    margin-top: 6rem;
+    width: 30rem;
+    height: 22.5rem;
+  }
+}

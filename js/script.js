@@ -5,6 +5,7 @@ const container = document.querySelector('.container');
 const merits = document.querySelector('.merits');
 const meritsSpan = document.querySelector('.merits-1');
 const stick = document.querySelector('.stick');
+const usernameContainer = document.querySelector('.username');
 
 const loginForm = document.querySelector('.login-form');
 const registerForm = document.querySelector('.register-form');
@@ -71,6 +72,7 @@ loginBtn.addEventListener('click', function () {
 
   loginForm.reset();
   merits.textContent = `功德：${meritsNum}`;
+  usernameContainer.textContent = username;
   loginContainer.classList.add('hidden');
   header.classList.remove('hidden');
   container.classList.remove('hidden');
@@ -116,8 +118,10 @@ const init = function () {
   } else {
     registerContainer.classList.add('hidden');
     loginContainer.classList.add('hidden');
-    const { meritsNum } = JSON.parse(userJSON);
+    const { username, meritsNum } = JSON.parse(userJSON);
     merits.textContent = `功德：${meritsNum ? meritsNum : 0}`;
+    usernameContainer.textContent = username;
+    console.log(username)
   }
 }
 

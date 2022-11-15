@@ -4,8 +4,14 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-y: hidden;
+  font-size: 62.5%;
+}
+
 body {
-  overflow: hidden;
+  /* body高度为窗口的高度 */
+  height: 100vh;
 }
 
 a {
@@ -17,23 +23,23 @@ a {
 .login-container {
   background-color: #000;
   color: #fff;
-  width: 360px;
-  height: 200px;
-  margin: 220px auto;
-  border-radius: 10px;
-  font-size: 18px;
-  padding: 20px;
+  width: 36rem;
+  height: 20rem;
+  margin: 22rem auto;
+  border-radius: 1rem;
+  font-size: 1.8rem;
+  padding: 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto 30%;
-  gap: 20px;
+  gap: 2rem;
 }
 
 .login-form {
   grid-column: 1 / -1;
   display: grid;
   grid-template-columns: 1fr 2.5fr;
-  gap: 20px;
+  gap: 2rem;
   align-items: center;
 }
 
@@ -44,22 +50,22 @@ a {
 /* register */
 .register-container {
   background-color: #000;
-  width: 340px;
-  height: 240px;
-  margin: 220px auto;
-  border-radius: 10px;
-  font-size: 18px;
+  width: 34rem;
+  height: 24rem;
+  margin: 22rem auto;
+  border-radius: 1rem;
+  font-size: 1.8rem;
   color: #fff;
-  padding: 20px;
+  padding: 2rem;
   display: grid;
   grid-template-rows: auto 25%;
-  row-gap: 20px;
+  row-gap: 2rem;
 }
 
 .register-form {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 15px;
+  gap: 1.5rem;
   align-items: center;
 }
 
@@ -71,20 +77,28 @@ a {
 /* header */
 .header {
   width: 100%;
-  height: 50px;
   background-color: #000;
-  position: relative;
+  font-size: 1.6rem;
+  color: #fff;
+  /* 清除浮动 */
+  overflow: hidden;
+}
+
+.user {
+  float: right;
+  line-height: 5rem;
+  margin-right: 2rem;
 }
 
 .logout {
   display: block;
-  width: 80px;
-  height: 30px;
-  line-height: 30px;
-  position: absolute;
-  right: 20px;
-  top: 10px;
-  padding: 0 8px;
+  width: 8rem;
+  height: 3rem;
+  line-height: 3rem;
+  padding: 0 0.8rem;
+  margin-right: 2rem;
+  margin-top: 1rem;
+  float: right;
 }
 
 .logout:link,
@@ -97,47 +111,48 @@ a {
   font-weight: bold;
   background-color: #fff;
   color: #000;
-  border-radius: 3px;
+  border-radius: 0.3rem;
 }
 
 /* container */
 .container {
   width: 100%;
+  height: 100%;
   background-color: #000;
-  padding: 50px;
-  display: grid;
-  grid-template-columns: 1fr;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
 }
 
 .merits-container {
   color: #fff;
   text-align: center;
-  font-size: 24px;
-  margin-bottom: 150px;
+  font-size: 2.4rem;
+  margin-bottom: 15rem;
 }
 
 .woodenfish-container {
   justify-self: center;
-  height: 480px;
+  height: 48rem;
   position: relative;
 }
 
 .stick {
   position: absolute;
-  left: 100px;
   z-index: 99;
-  width: 200px;
-  height: 200px;
+  width: 20rem;
+  height: 20rem;
   background-image: url('../images/stick-white.png');
   background-size: cover;
   /* transform: rotate(45deg); */
 }
 
 .woodenfish {
-  margin: 100px;
-  width: 400px;
-  height: 300px;
+  margin-top: 10rem;
+  width: 40rem;
+  height: 30rem;
   background-image: url('../images/woodenfish-white.png');
   background-size: cover;
 }
@@ -149,12 +164,12 @@ a {
 .merits-1 {
   position: absolute;
   text-align: center;
-  top: 200px;
+  top: 20rem;
   left: 0;
   right: 0;
   z-index: 999;
   color: rgba(255, 255, 255, .9);
-  font-size: 20px;
+  font-size: 2rem;
 }
 
 
@@ -164,7 +179,7 @@ a {
 }
 
 .form-btn {
-  width: 150px;
-  height: 38px;
-  margin: 8px auto;
+  width: 15rem;
+  height: 3.8rem;
+  margin: 0.8rem auto;
 }
