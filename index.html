@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wooden Fish</title>
+  <link rel="shortcut icon" href="./img/favicon-sm.png" type="image/x-icon">
+  <link rel="stylesheet" href="./css/style.css">
+  <script defer src="./js/script.js"></script>
+</head>
+
+<body>
+  <div id="login" class="login-container hidden">
+    <form class="login-form">
+      <label for="login-name">用户名：</label>
+      <input type="text" id="login-name" name="login-name" class="login-input" placeholder="请输入用户名">
+      <label for="login-psw">密&nbsp;&nbsp;&nbsp;码：</label>
+      <input type="password" name="login-psw" id="login-psw" class="login-input" placeholder="请输入密码" autocomplete>
+    </form>
+    <button class="login-btn">登&nbsp;&nbsp;录</button>
+  </div>
+
+  <div id="register" class="register-container hidden">
+    <form class="register-form">
+      <label for="register-name">用&nbsp;户&nbsp;名：</label>
+      <input type="text" id="register-name" name="register-name" class="register-input" placeholder="请输入用户名">
+      <label for="register-psw">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+      <input type="password" name="register-psw" id="register-psw" class="register-input" placeholder="请输入密码"
+        autocomplete>
+      <label for="register-check-psw">确认密码：</label>
+      <input type="password" name="register-check-psw" id="register-check-psw" class="register-input"
+        placeholder="请输入密码" autocomplete>
+    </form>
+    <button class="register-btn">注&nbsp;&nbsp;册</button>
+  </div>
+
+  <header>
+    <div class="header">
+      <a href="#" class="logout">退出登录</a>
+    </div>
+  </header>
+
+  <body>
+    <div class="container">
+      <div class="merits-container">
+        <span class="merits">功德：100</span>
+      </div>
+      <div class="woodenfish-container">
+        <div class="stick"></div>
+        <div class="woodenfish"></div>
+      </div>
+      <div class="merits-1 hidden">功德 +1</div>
+    </div>
+  </body>
+</body>
+
+</html>
